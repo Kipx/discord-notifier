@@ -59,12 +59,12 @@ public interface DiscordNotifierConfig extends Config
 			keyName = "questtypesenabled",
 			name = "Enabled Quest Types",
 			description = "Which quest types to send notifications for (separated by commas); the types are as follows: " +
-					"f2p (Free to Play), Member, Novice, Intermediate, Experienced, Master, Grandmaster, Special",
+					"freetoplay (Free to Play), Member, Novice, Intermediate, Experienced, Master, Grandmaster, Special",
 			section = questSettings,
 			position = 3
 	)
 	default String questTypesEnabled(){
-		return "f2p,member,novice,intermediate,experienced,master,grandmaster,special";
+		return "freetoplay,member,novice,intermediate,experienced,master,grandmaster,special";
 	}
 
 	@ConfigItem(
