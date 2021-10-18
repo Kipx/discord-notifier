@@ -71,10 +71,11 @@ public class DiscordNotifierPlugin extends Plugin
 							(config.questTypesEnabled().contains("freetoplay") && quest.getFreeToPlay() == true))) &&
 							(quest.getQuestPoints() >= config.questPointMinimum())) {
 						String request = String.format("{ \"embeds\": [{ \"author\": {\"name\": \"%s\", \"icon_url\": " +
-										"\"%s\" }, \"description\": \"%s\", \"color\": %d }] }", client.getLocalPlayer().getName(),
+										"\"%s\" }, \"description\": \"%s\", \"color\": %d, \"footer\": { \"text\": \"%s\" } }] }", client.getLocalPlayer().getName(),
 								"https://oldschool.runescape.wiki/images/Quest_point_icon.png", "Just Completed the ["
 										+ quest.getName() + "](https://oldschool.runescape.wiki/w/" + quest.getName()
-										.replace(" ", "_") + ") Quest!", 1175562);
+										.replace(" ", "_") + ") Quest!", 1175562, "Awarded " +
+										quest.getQuestPoints() + " Quest Point" + (quest.getQuestPoints() > 1 ? "s" : ""));
 						DiscordWebhook.sendRequest(config.webhookURL(), request);
 					}
 				}
