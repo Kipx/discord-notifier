@@ -59,12 +59,12 @@ public interface DiscordNotifierConfig extends Config
 			keyName = "questtypesenabled",
 			name = "Enabled Quest Types",
 			description = "Which quest types to send notifications for (separated by commas); the types are as follows: " +
-					"f2p (Free to Play), Member, Novice, Intermediate, Experienced, Master, Grandmaster, Special, Miniquest",
+					"f2p (Free to Play), Member, Novice, Intermediate, Experienced, Master, Grandmaster, Special",
 			section = questSettings,
 			position = 3
 	)
 	default String questTypesEnabled(){
-		return "f2p,member,novice,intermediate,experienced,master,grandmaster,special,miniquest";
+		return "f2p,member,novice,intermediate,experienced,master,grandmaster,special";
 	}
 
 	@ConfigItem(
@@ -76,5 +76,16 @@ public interface DiscordNotifierConfig extends Config
 	)
 	default int questPointMinimum(){
 		return 1;
+	}
+
+	@ConfigItem(
+			keyName = "onqueststart",
+			name = "On Quest Start",
+			description = "Send notification when quest is started",
+			section = questSettings,
+			position = 5
+	)
+	default boolean onQuestStart(){
+		return false;
 	}
 }
