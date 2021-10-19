@@ -1,9 +1,10 @@
 package com.discordnotifier;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class QuestData {
-    private static List<Quest> quests = List.of(
+    private static List<Quest> quests = Arrays.asList(
             //Free to play quests
             new Quest("Below Ice Mountain", true, "novice", 1, "2000 Coins," +
                     "Access to the Ruins of Camdozaal"),
@@ -179,7 +180,7 @@ public class QuestData {
             new Quest("What Lies Below", false, "intermediate", 1, ""),
             new Quest("Witch's House", false, "intermediate", 4, ""),
             new Quest("Zogre Flesh Eaters", false, "intermediate", 1, "")
-            );
+    );
 
     public static List<Quest> getQuests() {
         return quests;
