@@ -26,6 +26,6 @@ public class DiscordNotifierPluginTest
 				"https://oldschool.runescape.wiki/images/Quest_point_icon.png", "Just Completed the ["
 						+ "The Grand Tree" + "](https://oldschool.runescape.wiki/w/" + "The Grand Tree"
 						.replace(" ", "_") + ") Quest!", 1175562, "Awarded " + 1 + " Quest Point");
-		DiscordWebhook.sendRequest("https://discord.com/api/webhooks/899400118632087613/gXjInZeJe6lavrTrq8RjNJJuZVrsP5YYLrh1JKBRgOyTK3z9hY20ynf9yWZLlL1_E2pe", request);*/
+		DiscordWebhook.sendRequest("", request);*/
 	}
 }
